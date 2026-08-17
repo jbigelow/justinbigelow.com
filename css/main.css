@@ -65,7 +65,7 @@ hr {
 
 div.navbar {
 	position: absolute;
-	top: 60px;
+	top: 47px;
 	border: 0;
 	margin: 0;
 	width: 100%;
@@ -111,18 +111,61 @@ div.navbar {
 }
 
 
+/* Project specific left-hand menu       */
+/* ===================================== */
+
+#leftmenu ul {
+  text-align: right;
+  font-weight: bold;
+  background: #eee;
+  list-style-type: none;
+  position: absolute;
+  left: 0px;
+  top: 83px;
+  border-top: solid 1px #ccc;
+  border-right: solid 1px #ccc;
+  padding: 0;
+  margin: 0;
+}
+
+#leftmenu li {
+  margin: 0;
+  border-bottom: solid 1px #ddd;
+}
+
+#leftmenu a {
+  text-decoration: none;
+  border: none;
+  display: block;
+  margin: 0;
+  padding: 5px 10px;
+  color: #777;
+}
+
+#leftmenu a:hover {
+  background: #777;
+  color: white;
+}
+
+#leftmenu a.active {
+  background: #0072ff;
+  color: white;
+}
+
+
 /* Main page content & footer            */
 /* ===================================== */
 
 div.main {
-	margin-top: 100px;
-	padding: 0 20px 20px 20px;
+	position: absolute;
+	top: 83px;
+	left: 12em;
+	padding-right: 20px;
 }
 
 #footer {
 	border-top: 1px solid #888;
 	margin-top: 10px;
-	padding: 10px 20px;
 }
 
 #footer p {
