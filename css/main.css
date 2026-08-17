@@ -1,0 +1,131 @@
+/* Site-wide formatting of standard tags */
+/* ===================================== */
+body {
+	background: #fefefe;
+	font: .8em sans-serif, Arial;
+	color: black;
+	border: 0;
+	margin: 0;
+}
+
+p { margin: 10pt; }
+
+h1 {
+	color: #333;
+	font-size: 1.7em;
+}
+
+h2 {
+	color: #333;
+	font-size: 1.4em;
+}
+
+a img, a:link, a:hover { border: none; }
+
+a:link {
+	text-decoration: none;
+	color: #0072ff;
+	border-bottom: groove 1px #0072ff;
+}
+
+a:visited {
+	text-decoration: none;
+	color: navy;
+	border-bottom: groove 1px navy;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #004090;
+	border-bottom: dotted 1px #004090;
+}
+
+hr {
+  background: #eee;
+  height: 1px;
+}
+
+
+/* Header: logo and top menu             */
+/* ===================================== */
+
+#banner {
+	height: 47px;
+}
+
+#banner a {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	border: none;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #333;
+}
+
+div.navbar {
+	position: absolute;
+	top: 60px;
+	border: 0;
+	margin: 0;
+	width: 100%;
+	padding: 0;
+	background-color: #eee;
+	text-align: right;
+	border-top: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
+}
+
+#menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+#menu li {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+#menu a {
+  float: right;
+  display: block;
+  padding: 5px 20px;
+  margin: 0;
+  border-bottom: none;
+  text-decoration: none;
+  font-weight: bold;
+  color: #777;
+}
+
+#menu a:hover {
+  background-color: #ddd;
+}
+
+#menu a.active {
+  color: white;
+  background: #0072ff;
+}
+
+
+/* Main page content & footer            */
+/* ===================================== */
+
+div.main {
+	margin-top: 100px;
+	padding: 0 20px 20px 20px;
+}
+
+#footer {
+	border-top: 1px solid #888;
+	margin-top: 10px;
+	padding: 10px 20px;
+}
+
+#footer p {
+	color: #888;
+	font-size: .8em;
+}
