@@ -1,14 +1,18 @@
 /* Site-wide formatting of standard tags */
 /* ===================================== */
+* {
+	box-sizing: border-box;
+}
+
 body {
 	background: #fefefe;
-	font: .8em sans-serif, Arial;
+	font: 1em/1.4 sans-serif, Arial;
 	color: black;
 	border: 0;
 	margin: 0;
 }
 
-p { margin: 10pt; }
+p { margin: 10pt 0; }
 
 h1 {
 	color: #333;
@@ -19,6 +23,8 @@ h2 {
 	color: #333;
 	font-size: 1.4em;
 }
+
+img { max-width: 100%; }
 
 a img, a:link, a:hover { border: none; }
 
@@ -43,6 +49,7 @@ a:hover {
 hr {
   background: #eee;
   height: 1px;
+  border: 0;
 }
 
 
@@ -50,13 +57,11 @@ hr {
 /* ===================================== */
 
 #banner {
-	height: 47px;
+	padding: 10px;
+	border-bottom: solid 1px #ccc;
 }
 
 #banner a {
-	position: absolute;
-	left: 10px;
-	top: 10px;
 	border: none;
 	font-size: 1.5em;
 	font-weight: bold;
@@ -64,15 +69,7 @@ hr {
 }
 
 div.navbar {
-	position: absolute;
-	top: 47px;
-	border: 0;
-	margin: 0;
-	width: 100%;
-	padding: 0;
 	background-color: #eee;
-	text-align: right;
-	border-top: solid 1px #ccc;
 	border-bottom: solid 1px #ccc;
 }
 
@@ -80,20 +77,18 @@ div.navbar {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  text-align: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 #menu li {
-  display: inline;
-  padding: 0;
   margin: 0;
-  text-align: right;
 }
 
 #menu a {
-  float: right;
   display: block;
-  padding: 5px 20px;
+  padding: 10px 20px;
   margin: 0;
   border-bottom: none;
   text-decoration: none;
@@ -111,18 +106,24 @@ div.navbar {
 }
 
 
-/* Project specific left-hand menu       */
+/* Page layout: left-hand menu + main    */
 /* ===================================== */
+
+.content-wrap {
+	display: flex;
+	align-items: flex-start;
+}
+
+#leftmenu {
+	flex: 0 0 auto;
+	width: 12em;
+}
 
 #leftmenu ul {
   text-align: right;
   font-weight: bold;
   background: #eee;
   list-style-type: none;
-  position: absolute;
-  left: 0px;
-  top: 83px;
-  border-top: solid 1px #ccc;
   border-right: solid 1px #ccc;
   padding: 0;
   margin: 0;
@@ -138,7 +139,7 @@ div.navbar {
   border: none;
   display: block;
   margin: 0;
-  padding: 5px 10px;
+  padding: 8px 10px;
   color: #777;
 }
 
@@ -157,10 +158,9 @@ div.navbar {
 /* ===================================== */
 
 div.main {
-	position: absolute;
-	top: 83px;
-	left: 12em;
-	padding-right: 20px;
+	flex: 1 1 auto;
+	min-width: 0;
+	padding: 20px;
 }
 
 #footer {
@@ -171,4 +171,51 @@ div.main {
 #footer p {
 	color: #888;
 	font-size: .8em;
+}
+
+
+/* Responsive: tablets and phones        */
+/* ===================================== */
+
+@media (max-width: 768px) {
+	#banner a {
+		font-size: 1.3em;
+	}
+
+	#menu {
+		justify-content: center;
+	}
+
+	#menu a {
+		padding: 10px 14px;
+	}
+
+	.content-wrap {
+		flex-direction: column;
+	}
+
+	/* Left menu duplicates the top nav; hide it once the top nav
+	   stacks so links aren't shown twice on small screens. */
+	#leftmenu {
+		display: none;
+	}
+
+	div.main {
+		width: 100%;
+		padding: 15px;
+	}
+}
+
+@media (max-width: 420px) {
+	#menu li {
+		width: 100%;
+	}
+
+	#menu a {
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 1.4em;
+	}
 }
