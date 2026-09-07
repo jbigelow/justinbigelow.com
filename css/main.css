@@ -159,8 +159,10 @@ div.navbar {
 
 .infobox {
 	border: 1px solid #444;
+	border-radius: 6px;
 	background: #d3d3d3;
-	color: #333;
+	color: #555;
+	font-size: 0.9em;
 	padding: 10px;
 	margin: 10pt 0;
 }
