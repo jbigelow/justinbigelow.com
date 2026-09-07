@@ -154,6 +154,18 @@ div.navbar {
 }
 
 
+/* Info box: bordered callout content    */
+/* ===================================== */
+
+.infobox {
+	border: 1px solid #444;
+	background: #d3d3d3;
+	color: #333;
+	padding: 10px;
+	margin: 10pt 0;
+}
+
+
 /* Main page content & footer            */
 /* ===================================== */
 
