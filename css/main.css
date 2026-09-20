@@ -192,6 +192,20 @@ div.navbar {
 	margin: 10px 0 0 0;
 }
 
+/* Section images: every image placed directly in a section div
+   (div[id] under .main) is shown at the same 4:3 size, cropped to fit.
+   Logos in the infobox and footer are not direct children, so they
+   are unaffected. */
+.main > div[id] > img {
+	width: 300px;
+	max-width: 100%;
+	height: auto;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	margin: 0 10px 10px 0;
+	vertical-align: top;
+}
+
 
 /* Main page content & footer            */
 /* ===================================== */
